@@ -1,18 +1,14 @@
 const toggleTheme = () => {
     const rootContainer = document.querySelector('#app-root');
+    const isDarkTheme = rootContainer.classList.contains('dark-theme');
+    const newTheme = isDarkTheme ? 'light-theme' : 'dark-theme';
 
-    const currentTheme = rootContainer.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-    const themeToBeApplied = currentTheme === "dark-theme" ? 'light-theme' : 'dark-theme';
-    localStorage.setItem('theme', themeToBeApplied);
-    rootContainer.classList.replace(currentTheme, themeToBeApplied);
+    localStorage.setItem('theme', newTheme);
+    rootContainer.classList.replace(isDarkTheme ? 'dark-theme' : 'light-theme', newTheme);
 }
 
 const onClickHandleToggleTheme = () => {
-    const btnToggleTheme = document.querySelector('#btnToggleTheme');
-
-    btnToggleTheme.addEventListener('click', () => {
-        toggleTheme();
-    });
+    document.querySelector('#btnToggleTheme').addEventListener('click', toggleTheme);
 }
 
 const onPageLoadApplyTheme = () => {
@@ -20,12 +16,9 @@ const onPageLoadApplyTheme = () => {
     const theme = localStorage.getItem('theme');
 
     if (!theme) return;
-
     if (rootContainer.classList.contains(theme)) return;
-
-    toggleTheme();
+    document.querySelector('#app-root').classList.add(storedTheme);
 }
-
 
 onClickHandleToggleTheme();
 onPageLoadApplyTheme();
