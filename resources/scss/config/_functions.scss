@@ -25,6 +25,8 @@
 }
 
 // Themify
+
+// if no theme is passed, use the default themes map (light and dark)
 @mixin themify($themes: $themes) {
     @each $themeName, $themeValues in $themes {
 

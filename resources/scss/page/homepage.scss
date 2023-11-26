@@ -2,7 +2,7 @@
 @import './../mobile/homepage';
 
 .app-container {
-    @include themify($themes) {
+    @include themify() {
         color: themed('textColor');
         background-color: themed('mainBackgroundColor');
     }
