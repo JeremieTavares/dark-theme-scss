@@ -107,19 +107,9 @@ a {
   color: currentColor;
 }
 
-button {
+.btn {
   font-size: 1rem;
   line-height: 1.6;
-  border: 1px solid transparent;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 8px 20px;
-  display: inline-block;
-  margin: 3px;
-  transition: color 0.1s, border-color 0.1s, background-color 0.1s;
-}
-
-.btn {
   border: 1px solid transparent;
   cursor: pointer;
   border-radius: 5px;
@@ -132,11 +122,9 @@ button {
   transform: scale(0.98);
 }
 
-.btn-primary {
-  color: #f4f4f4;
-  border: 2px solid #005ff4;
-}
 .light-theme .btn-primary {
+  color: #222;
+  border: 2px solid #005ff4;
   background-color: #0e6cff;
 }
 .light-theme .btn-primary:hover {
@@ -144,6 +132,8 @@ button {
   color: #fff;
 }
 .dark-theme .btn-primary {
+  color: #ddd;
+  border: 2px solid #005ff4;
   background-color: #0055da;
 }
 .dark-theme .btn-primary:hover {
@@ -151,11 +141,9 @@ button {
   color: #fff;
 }
 
-.btn-secondary {
-  color: #f4f4f4;
-  border: 2px solid #e67a00;
-}
 .light-theme .btn-secondary {
+  color: #222;
+  border: 2px solid #e67a00;
   background-color: #ff8700;
 }
 .light-theme .btn-secondary:hover {
@@ -163,6 +151,8 @@ button {
   color: #fff;
 }
 .dark-theme .btn-secondary {
+  color: #ddd;
+  border: 2px solid #e67a00;
   background-color: #cc6c00;
 }
 .dark-theme .btn-secondary:hover {
